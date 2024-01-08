@@ -1,0 +1,30 @@
+<div class="hstack gap-2 align-items-center bg-light px-2 py-1 shadow-input-1 mb-3">
+    <pq-button buttonClass="smaller fw-bold" (clickEvent)="addField()">Add Field</pq-button>
+    <pq-button buttonClass="smaller fw-bold" (clickEvent)="addTableElement()">Add Table</pq-button>
+</div>
+
+<div *ngFor="let field of fields" class="hstack gap-2 align-items-center px-3">
+    <pq-textbox [innerText]="123"></pq-textbox>
+    <pq-textbox label="Field Value"></pq-textbox>
+    <pq-button label="draw bbox">Draw Bbox</pq-button> 
+</div>
+
+<div *ngFor="let lineItem of line_items" class="hstack gap-0 mb-3">
+    <div class="vstack gap-0 align-items-center" *ngFor="let field of lineItem.items; let i = index">
+        <pq-textbox  [label]="'Field Name ' + (i + 1)"></pq-textbox>
+        <pq-textbox  [label]="'Field Value ' + (i + 1)"></pq-textbox>
+        <pq-button  label="'Draw Bbox'">Draw Bbox</pq-button>
+    </div>
+</div>
+
+<!-- <div *ngFor="let lineItem of line_items" class="hstack gap-2 align-items-center px-3">
+    <ng-container *ngFor="let field of lineItem.items; let i = index">
+        <pq-textbox [label]="'Field Name ' + (i + 1)"></pq-textbox>
+    </ng-container>
+    <ng-container *ngFor="let field of lineItem.items; let i = index">
+        <pq-textbox [label]="'Field Value ' + (i + 1)"></pq-textbox>
+    </ng-container>
+    <ng-container *ngFor="let field of lineItem.items; let i = index">
+        <pq-button label="'Draw Bbox ' + (i + 1)">Draw Bbox</pq-button>
+    </ng-container>
+</div> -->

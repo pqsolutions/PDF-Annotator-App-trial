@@ -1,0 +1,45 @@
+<section class="container py-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="display-7">PDF Feeder</div>
+            <div class="lead">Feed data from pdf to AI</div>
+        </div>
+    </div>
+</section>
+
+<div class="container border rounded overflow-hidden shadow-sm">
+    <div class="row" style="height: calc(100vh - 150px);">
+        <div class="col-sm-12">
+            <div class="row bg-gradient-light">
+                <div class="col-sm-6 border-bottom">
+                    <div class="px-2 py-2">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="group1" id="btnpdfpreview" autocomplete="off" checked>
+                            <label class="btn btn-sm btn-outline-secondary" for="btnpdfpreview">PDF Preview</label>
+                          
+                            <input type="radio" class="btn-check" name="group1" id="btntextpreview" autocomplete="off">
+                            <label class="btn btn-sm btn-outline-secondary" for="btntextpreview">Text Preview</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 border-bottom">
+                    <div class="px-2 py-2">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="group2" id="btnfieldlists" autocomplete="off" checked>
+                            <label class="btn btn-sm btn-outline-secondary" for="btnfieldlists">Fields List</label>
+                          
+                            <input type="radio" class="btn-check" name="group2" id="btntransactions" autocomplete="off">
+                            <label class="btn btn-sm btn-outline-secondary" for="btntransactions">Transactions</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 px-0 h-100 border-end">
+            <app-annotator></app-annotator>
+        </div>
+        <div class="col-sm-6 px-0 h-100 overflow-y-auto pb-5">
+            <app-transactions></app-transactions>
+        </div>
+    </div>
+</div>
