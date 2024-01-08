@@ -1,4 +1,17 @@
 ## Flask Api for PDF annotation
-> run by using:
-> python run.py from root
-> run on server 10.10.13.6
+
+#### Install and run on 10.10.13.6 by using:
+```bash
+    cd PDF-Annotator-Flaskapi
+    conda activate flaskapp
+    python run.py 
+```
+
+#### Install and run on local machine by using:
+```bash
+    cd PDF-Annotator-Flaskapi
+    python -m venv pdf-flaskapi
+    source pdf-flaskapi/bin/activate
+    pip install -r requirements.txt 
+    python run.py 
+```
