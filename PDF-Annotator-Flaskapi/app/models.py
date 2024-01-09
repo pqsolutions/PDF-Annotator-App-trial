@@ -1,11 +1,14 @@
 # app/models.py
 from app import db
 
-class Field(db.Model):
+class Fields(db.Model):
+    __tablename__ = "fields_master_table"
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255), nullable=False)
+    field = db.Column(db.String(255), nullable=False)
 
-class File(db.Model):
+class Files(db.Model):
+    __tablename__ = "files_master_table"
     id = db.Column(db.Integer, primary_key=True)
     filename = db.Column(db.String(255), nullable=False)
+    filepath = db.Column(db.String(255), nullable=False)
     extracted = db.Column(db.Boolean, default=False)
